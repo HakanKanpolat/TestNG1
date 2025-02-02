@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Batch 291">
+    <test name="Smoke Test">
+
+        <classes>
+            <class name="techproed.tests.day18_pom.C01_DriverUsage"></class>
+            <class name="techproed.tests.smoke.C02_PositiveLoginTest"></class>
+        </classes>
+
+    </test>
+</suite>

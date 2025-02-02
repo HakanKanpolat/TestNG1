@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Batch 291">
+    <test name="Smoke Test">
+
+        <!--        belirli packagelari bu syntax ile calistirabiliriz -->
+        <!--        ctrl + / ile yorum satiri -->
+        <packages>
+            <package name="techproed.tests.smoke"></package>
+        </packages>
+
+    </test>
+</suite>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kullanici Kayit Formu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .rules {
+            background-color: #e7f5ff;
+            border-left: 5px solid #2196F3;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Kullanici Kayit Formu</h2>
+        <div class="rules">
+            <strong>Kayit Olma Kurallari:</strong>
+            <ul>
+                <li>Yas araligi 18 ile 100 arasinda olmalidir.</li>
+                <li>Lutfen gecerli bir yas giriniz.</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label for="age">Yasiniz:</label>
+            <input type="text" id="age" name="age">
+        </div>
+        <button onclick="validateAge()">Yasi Dogrula</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function validateAge() {
+            var age = document.getElementById('age').value;
+            var message = "";
+
+            if (!age) {
+                message = "Yas alani bos birakilamaz!";
+            } else if (isNaN(age) || age < 0) {
+                message = "Gecersiz yas!";
+            } else if (age < 18 || age > 100) {
+                message = "Yas 18 ile 100 arasinda olmalidir.";
+            } else {
+                message = "Yas dogrulandi!";
+            }
+
+            document.getElementById('result').textContent = message;
+        }
+    </script>
+</body>
+</html>
